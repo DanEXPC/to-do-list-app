@@ -4,7 +4,7 @@ type TodoListProps = {
     todos: any[]
 }
 
-export const TodoList: React.FC<TodoListProps> = ({ todos }) => {
+export const ToDoList: React.FC<TodoListProps> = ({ todos }) => {
   return (
     <ul>
       {todos.map(todo => {
