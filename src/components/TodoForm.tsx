@@ -7,6 +7,13 @@ export const ToDoForm: React.FC = () => {
     setTitle(event.target.value)
   }
 
+  const keyPressHandler = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter') {
+      console.log(title)
+      setTitle('')
+    }
+  }
+
   return (
     <div className="input-field mt2">
         <input 
@@ -14,7 +21,9 @@ export const ToDoForm: React.FC = () => {
           value={title} 
           type="text" 
           id="title" 
-          placeholder="Enter task title"/>
+          placeholder="Enter task title"
+          onKeyPress={keyPressHandler}
+          />
         <label htmlFor="title" className="active">Enter task title</label>
     </div>
   )
